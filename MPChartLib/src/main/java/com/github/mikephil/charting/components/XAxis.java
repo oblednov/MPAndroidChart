@@ -55,6 +55,15 @@ public class XAxis extends AxisBase {
     /**
      * enum for the position of the x-labels relative to the chart
      */
+
+
+    private boolean mMultiLineLabel = false;
+
+
+    public boolean isMultiLineLabelEnabled(){
+        return mMultiLineLabel;
+    }
+
     public enum XAxisPosition {
         TOP, BOTTOM, BOTH_SIDED, TOP_INSIDE, BOTTOM_INSIDE
     }
@@ -114,5 +123,10 @@ public class XAxis extends AxisBase {
      */
     public boolean isAvoidFirstLastClippingEnabled() {
         return mAvoidFirstLastClipping;
+    }
+
+
+    public void setMultiLineLabel(boolean enabled) {
+        mMultiLineLabel = enabled;
     }
 }
